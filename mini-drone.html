@@ -7,7 +7,7 @@
     <title>Mini drone</title>
 </head>
 <body>
-        <!-- Header Section -->
+    <!-- Header Section -->
 <header class="text-gray-600 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -26,12 +26,263 @@
     </div>
 </header>
 
+    <!-- Content from Document -->
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto px-5 py-10">
+            <h1 class="text-3xl font-medium text-gray-900 mb-6">Mini Quadcopter Project</h1>
+            <p>Hey everyone, today I am going to share one of my running projects on mini quadcopter. I started this project a few weeks ago. Here are some pictures and videos of the quadcopter:</p>
+            <div class="my-6">
+                <div style="display: flex; gap: 10px;">
+                    <a href="drone1.jpg" target="_blank">
+                        <img src="drone1.jpg" alt="Quadcopter Image 1" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone2.jpg" target="_blank">
+                        <img src="drone2.jpg" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone3.jpg" target="_blank">
+                        <img src="drone3.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone4.jpg" target="_blank">
+                        <img src="drone4.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone5.jpg" target="_blank">
+                        <img src="drone5.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone6.jpg" target="_blank">
+                        <img src="drone6.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+                    </a>
+                </div>
+                <div style="margin-top: 20px;">
+                    <iframe 
+                        class="my-4" 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/JjsMAY3wa24" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">Components Used</h2>
+            <table class="table-auto border-collapse border border-gray-400 w-full text-left">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-400 px-4 py-2">Component</th>
+                        <th class="border border-gray-400 px-4 py-2">Quantity</th>
+                        <th class="border border-gray-400 px-4 py-2">Price (tk)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="border px-4 py-2">ESP32 microcontroller (38 pin)</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">400</td></tr>
+                    <tr><td class="border px-4 py-2">MPU9250</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">450</td></tr>
+                    <tr><td class="border px-4 py-2">5v Booster</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">60</td></tr>
+                    <tr><td class="border px-4 py-2">1020 brushed motor</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">320</td></tr>
+                    <tr><td class="border px-4 py-2">76 mm propeller</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">150</td></tr>
+                    <tr><td class="border px-4 py-2">A03400N MOSFET</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">60</td></tr>
+                    <tr><td class="border px-4 py-2">SMD 10k resistor</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">8</td></tr>
+                    <tr><td class="border px-4 py-2">SMD 200 ohm resistor</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">8</td></tr>
+                    <tr><td class="border px-4 py-2">SMD 100 ohm resistor</td><td class="border px-4 py-2">2</td><td class="border px-4 py-2">4</td></tr>
+                    <tr><td class="border px-4 py-2">SMD diode</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">8</td></tr>
+                    <tr><td class="border px-4 py-2">SMD LED (red, green)</td><td class="border px-4 py-2">2</td><td class="border px-4 py-2">10</td></tr>
+                    <tr><td class="border px-4 py-2">PCB</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">200</td></tr>
+                    <tr><td class="border px-4 py-2">1200mah battery 25C</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">310</td></tr>
+                    <tr><th class="border px-4 py-2">Total</th><td class="border px-4 py-2" colspan="2">1998</td></tr>
+                </tbody>
+            </table>
+
+            <section class="pricing-experience my-6">
+                  <p>
+                      Overall price may get lesser if someone can buy these things from one shop. From my experience, I needed to order these products from different online shops, so I needed to spend more than this amount. 
+                  </p>
+                  <p>
+                      Now I am going to tell the building process step by step and also going to share some really helpful YouTube links that I watched for understanding programming.
+                  </p>
+              </section>
+
+            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Building Process</h2>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Designing the PCB & Soldering</h3>
+            <p>If you have previous knowledge of PCB designing, just download the rar file, unzip, and then follow the schematic. I have used EasyEDA software for designing.</p>
+
+            <section class="download-rar my-6">
+                <a href="Schematics.rar" download="Schematics.rar" style="color: blue; text-decoration: underline; font-weight: bold;">
+                    Schematics.rar
+                </a>
+            </section>
+             <p>Watch this video for learning PCB designing in EasyEDA.</p>
+
+            <div style="margin-top: 20px;">
+                  <iframe 
+                      class="my-4" 
+                      width="560" 
+                      height="315" 
+                      src="https://www.youtube.com/embed/utBQqcuOt9U?start=2" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+                  </iframe>
+              </div>
+
+            <p>Otherwise, you can connect the components using Veroboard like the image below. I only developed the motor driver on it.</p>
+            <a href="vero.jpg" target="_blank">
+                        <img src="vero.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+            </a>
+            <p>I also added a picture of the PCB version of the hardware.</p>
+            <a href="pcb.jpg" target="_blank">
+                        <img src="pcb.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+            </a>
+
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">Step 2: Designing the Frame</h3>
+            <p>Frame photo is given below. It is best practice to make it with 3D designing. I will attach the 3D design file below. You can also make one with some light weight material.</p>
+            <a href="frame.jpg" target="_blank">
+                        <img src="frame.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+            </a>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">Step 3: Connecting the Motor</h3>
+            <p>Finally you need to connect all the component as the picture below. You should maintain the rotation direction of the motor and the propeller as the picture below. Also make sure to place the mpu6050 in same direction like given in the picture. CW means clockwise and ACW means anticlockwise.</p>
+            <div class="my-6">
+                <div style="display: flex; gap: 10px;">
+                    <a href="pcb.jpg" target="_blank">
+                        <img src="pcb.jpg" alt="Quadcopter Image 1" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="upview.jpg" target="_blank">
+                        <img src="upview.jpg" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone3.jpg" target="_blank">
+                        <img src="drone3.jpg" alt="Quadcopter Image 3" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone5.jpg" target="_blank">
+                        <img src="drone5.jpg" alt="Quadcopter Image 1" style="width: 400px; height: auto;">
+                    </a>
+                    <a href="drone1.jpg" target="_blank">
+                        <img src="drone1.jpg" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+                    </a>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-4">Step 4: Uploading the Code</h3>
+            <p>Now download the rar file, unzip it, upload the Arduino code to the esp32 and install the apk to your phone.</p>
+            <section class="download-rar my-6">
+                <a href="codeandapk.rar" download="codeandapk.rar" style="color: blue; text-decoration: underline; font-weight: bold;">
+                    codeandapk.rar
+                </a>
+            </section>
+            <p>After uploading the code, it will take some time for calibration. In that time, Red led will blink in two pattern. Don’t move or vibrate the drone at that time. While the calibration is over  green led will become on. Now you need to open your phone and turn on the Bluetooth. Then you may find some Bluetooth list like below. </p>
+            <a href="esp32bt.png" target="_blank">
+                        <img src="esp32bt.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+            <p>Select ESP32_BT to pair.</p>
+            <a href="paired.png" target="_blank">
+                        <img src="paired.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+            <p>Then open the app and move the two balls in any direction and leave the balls so that P,R,Y become zero.</p>
+            <a href="notzero.png" target="_blank">
+                        <img src="notzero.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+            <a href="zero.png" target="_blank">
+                        <img src="zero.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+
+            <p>Then move the left joystick ball in the bottom so that that T also becomes zero.</p>
+            <a href="t0.png" target="_blank">
+                        <img src="t0.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+            
+            <p>Now click connect & You will see the paired list. Select the one like below.</p>
+            <a href="list.png" target="_blank">
+                        <img src="list.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+
+            <p>You will be confirmed by written connected in green in the top.</p>
+            <a href="connected.png" target="_blank">
+                        <img src="connected.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+            <p>Now connection is complete. For staring the motors just move left joystick ball to bottom left.
+                Green light will become off in the drone indicating it is ready to fly. Now you can operate this remote as drone remote. Right joystick is for left-right, front-back movement and left joystick is for up-down and yaw movement.
+                For shutting down simply move the left joystick ball bottom right.
+            </p>
+
+            <a href="onoff.png" target="_blank">
+                        <img src="onoff.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
 
 
 
+            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Troubleshooting</h2>
+            <p>If in the setup red led is blinking twice periodically then it is saying the microcontroller cannot communicate with the mpu9250.  So, you may need to troubleshoot the connection or the sensor. In addition, there may be error during quadcopter is flying. The chart shows relation of blink and error</p>
+            
+            <a href="error.png" target="_blank">
+                        <img src="error.png" alt="Quadcopter Image 2" style="width: 400px; height: auto;">
+            </a>
+
+
+            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Future Updates</h2>
+            <p>
+                This drone is not perfect as you can see in the video. The microcontroller gets reset every time while I start the motor. 
+                So, right now I am giving external power to the microcontroller from USB. But it is not a solution. The guy from the last video 
+                says it is due to EMI of the motor driver to the sensor. He suggests using a copper or aluminum shield for the microcontroller. 
+                Right now, I am working on it.
+            </p>
+            <p>
+                Not only that, a motor is taking 4A in full throttle while running alone. But when all 4 motors are running, each motor is taking 
+                only 2.3A in full throttle. Therefore, the total thrust is much less than 4*45 = 180g. As my drone weighs 90g, it cannot fly higher. 
+                So, I am working on it also.
+            </p>
+            <p>
+                I will keep updating this page while solving these problems. I hope to make a YouTube video covering programming to hardware—everything 
+                you need to know about making this drone. Thanks for reaching this post. 😊
+            </p>
+            <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Necessary Links</h2>
+            <div>
+            <p>There is a lot more to do for tuning the PID constants. You can watch his videos for understanding the code.</p>
+            <div style="margin-top: 20px;">
+                <iframe 
+                    class="my-4" 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/JBvnB0279-Q" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
 
 
 
+            <p>I have modified his code for my drone. There is another channel for learning coding; I think this is easier.</p>
+            <div style="margin-top: 20px;">
+                <iframe 
+                    class="my-4" 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/fQhsgUEnV2w" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p>Moreover, recently I have seen a video on FPV drone; I think this is also informative.</p>
+            <div style="margin-top: 20px;">
+                <iframe 
+                    class="my-4" 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/Sa6EslOHsI0?start=190" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+
+
+
+        
+        </div>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="text-gray-600 body-font">
@@ -84,6 +335,5 @@
   <div class="mt-12"></div>
 </div>
 
-    
 </body>
 </html>
