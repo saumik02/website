@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Mini Quadcopter Project | SAUMIK DAILY</title>
+    <style>
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        @media (min-width: 768px) {
+            .gallery-img {
+                height: 250px;
+            }
+        }
+        .content-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="text-gray-600 body-font bg-white shadow-sm">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" 
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" 
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">SAUMIK DAILY</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href="index.html" class="mr-5 hover:text-gray-900">Home</a>
+                <a href="about.html" class="mr-5 hover:text-gray-900">About</a>
+                <a href="#projects" class="mr-5 hover:text-gray-900">Projects</a>
+                <a href="#contact" class="mr-5 hover:text-gray-900">Contact</a>
+                <a href="CV_SAUMIK.pdf" download class="ml-4 inline-flex items-center bg-indigo-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Download CV
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-gray-600 body-font bg-gradient-to-r from-indigo-50 to-purple-50 py-12">
+        <div class="container mx-auto px-5 flex flex-col items-center text-center">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Mini Quadcopter Project version 01</h1>
+            <p class="text-lg text-gray-700 max-w-3xl">Building a functional mini drone from scratch with ESP32 microcontroller</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-5 py-10">
+        <!-- Introduction -->
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Project Overview</h2>
+            <p class="text-gray-700 mb-4">Hey everyone, today I am going to share one of my running projects on mini quadcopter. I started this project a few weeks ago.</p>
+            
+            <!-- Image Gallery -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Project Images</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <a href="drone1.jpg" target="_blank" class="block">
+                        <img src="drone1.jpg" alt="Quadcopter Image 1" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone2.jpg" target="_blank" class="block">
+                        <img src="drone2.jpg" alt="Quadcopter Image 2" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone3.jpg" target="_blank" class="block">
+                        <img src="drone3.jpg" alt="Quadcopter Image 3" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone4.jpg" target="_blank" class="block">
+                        <img src="drone4.jpg" alt="Quadcopter Image 4" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone5.jpg" target="_blank" class="block">
+                        <img src="drone5.jpg" alt="Quadcopter Image 5" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone6.jpg" target="_blank" class="block">
+                        <img src="drone6.jpg" alt="Quadcopter Image 6" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Video -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Project Video</h3>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe 
+                        class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                        src="https://www.youtube.com/embed/JjsMAY3wa24" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Components Used</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="table-auto border-collapse border border-gray-400 w-full text-left">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="border border-gray-400 px-4 py-2 font-semibold">Component</th>
+                            <th class="border border-gray-400 px-4 py-2 font-semibold">Quantity</th>
+                            <th class="border border-gray-400 px-4 py-2 font-semibold">Price (tk)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">ESP32 microcontroller (38 pin)</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">400</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">MPU9250</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">450</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">5v Booster</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">60</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">1020 brushed motor</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">320</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">76 mm propeller</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">150</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">A03400N MOSFET</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">60</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">SMD 10k resistor</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">8</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">SMD 200 ohm resistor</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">8</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">SMD 100 ohm resistor</td><td class="border px-4 py-2">2</td><td class="border px-4 py-2">4</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">SMD diode</td><td class="border px-4 py-2">4</td><td class="border px-4 py-2">8</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">SMD LED (red, green)</td><td class="border px-4 py-2">2</td><td class="border px-4 py-2">10</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">PCB</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">200</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="border px-4 py-2">1200mah battery 25C</td><td class="border px-4 py-2">1</td><td class="border px-4 py-2">310</td></tr>
+                        <tr class="bg-gray-100 font-semibold"><td class="border px-4 py-2">Total</td><td class="border px-4 py-2" colspan="2">1998</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                <p class="text-gray-700 mb-2">
+                    Overall price may get lesser if someone can buy these things from one shop. From my experience, I needed to order these products from different online shops, so I needed to spend more than this amount. 
+                </p>
+                <p class="text-gray-700">
+                    Now I am going to tell the building process step by step and also going to share some really helpful YouTube links that I watched for understanding programming.
+                </p>
+            </div>
+        </section>
+
+        <!-- Building Process -->
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Building Process</h2>
+            
+            <!-- Step 1 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Designing the PCB & Soldering</h3>
+                <p class="text-gray-700 mb-4">If you have previous knowledge of PCB designing, just download the rar file, unzip, and then follow the schematic. I have used EasyEDA software for designing.</p>
+                
+                <div class="mb-4">
+                    <a href="Schematics.rar" download="Schematics.rar" 
+                       class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download Schematics.rar
+                    </a>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Watch this video for learning PCB designing in EasyEDA.</p>
+                
+                <div class="aspect-w-16 aspect-h-9 mb-6">
+                    <iframe 
+                        class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                        src="https://www.youtube.com/embed/utBQqcuOt9U?start=2" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Otherwise, you can connect the components using Veroboard like the image below. I only developed the motor driver on it.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col items-center">
+                        <a href="vero.jpg" target="_blank">
+                            <img src="vero.jpg" alt="Veroboard Setup" class="content-img rounded-lg shadow-md">
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">Veroboard Setup</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <a href="pcb.jpg" target="_blank">
+                            <img src="pcb.jpg" alt="PCB Version" class="content-img rounded-lg shadow-md">
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">PCB Version</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 2: Designing the Frame</h3>
+                <p class="text-gray-700 mb-4">Frame photo is given below. It is best practice to make it with 3D designing. I will attach the 3D design file below. You can also make one with some light weight material.</p>
+                
+                <div class="flex justify-center">
+                    <a href="frame.jpg" target="_blank">
+                        <img src="frame.jpg" alt="Drone Frame" class="content-img rounded-lg shadow-md">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 3: Connecting the Motor</h3>
+                <p class="text-gray-700 mb-4">Finally you need to connect all the component as the picture below. You should maintain the rotation direction of the motor and the propeller as the picture below. Also make sure to place the mpu6050 in same direction like given in the picture. CW means clockwise and ACW means anticlockwise.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <a href="pcb.jpg" target="_blank" class="block">
+                        <img src="pcb.jpg" alt="PCB Setup" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="upview.jpg" target="_blank" class="block">
+                        <img src="upview.jpg" alt="Top View" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone3.jpg" target="_blank" class="block">
+                        <img src="drone3.jpg" alt="Drone Side View" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone5.jpg" target="_blank" class="block">
+                        <img src="drone5.jpg" alt="Drone Detail" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                    <a href="drone1.jpg" target="_blank" class="block">
+                        <img src="drone1.jpg" alt="Complete Drone" class="gallery-img rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 4: Uploading the Code</h3>
+                <p class="text-gray-700 mb-4">Now download the rar file, unzip it, upload the Arduino code to the esp32 and install the apk to your phone.</p>
+                
+                <div class="mb-4">
+                    <a href="codeandapk.rar" download="codeandapk.rar" 
+                       class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download Code & APK
+                    </a>
+                </div>
+                
+                <p class="text-gray-700 mb-4">After uploading the code, it will take some time for calibration. In that time, Red led will blink in two pattern. Don't move or vibrate the drone at that time. While the calibration is over green led will become on. Now you need to open your phone and turn on the Bluetooth. Then you may find some Bluetooth list like below.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="flex flex-col items-center">
+                        <a href="esp32bt.png" target="_blank">
+                            <img src="esp32bt.png" alt="Bluetooth List" class="content-img rounded-lg shadow-md">
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">Bluetooth Device List</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <a href="paired.png" target="_blank">
+                            <img src="paired.png" alt="Paired Device" class="content-img rounded-lg shadow-md">
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">Paired Device</p>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Select ESP32_BT to pair. Then open the app and move the two balls in any direction and leave the balls so that P,R,Y become zero.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="flex flex-col items-center">
+                        <a href="notzero.png" target="_blank">
+                            <img src="notzero.png" alt="Non-Zero Values" class="content-img rounded-lg shadow-md">
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">Non-Zero Values</p>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Then move the left joystick ball in the bottom so that that T also becomes zero.</p>
+                
+                <div class="flex justify-center mb-6">
+                    <a href="t0.png" target="_blank">
+                        <img src="t0.png" alt="T Zero" class="content-img rounded-lg shadow-md">
+                    </a>
+                </div>
+                
+                <p class="text-gray-700 mb-4">Now click connect & You will see the paired list. Select the one like below.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="flex flex-col items-center">
+                        <a href="list.png" target="_blank">
+                            <img src="list.png" alt="Device List" class="content-img rounded-lg shadow-md">
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">Device List</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <a href="connected.png" target="_blank">
+                            <img src="connected.png" alt="Connected" class="content-img rounded-lg shadow-md">
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">Connected Status</p>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">You will be confirmed by written connected in green in the top. Now connection is complete. For staring the motors just move left joystick ball to bottom left. Green light will become off in the drone indicating it is ready to fly. Now you can operate this remote as drone remote. Right joystick is for left-right, front-back movement and left joystick is for up-down and yaw movement. For shutting down simply move the left joystick ball bottom right.</p>
+                
+                <div class="flex justify-center">
+                    <a href="onoff.png" target="_blank">
+                        <img src="onoff.png" alt="On/Off Control" class="content-img rounded-lg shadow-md">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Troubleshooting</h2>
+            <p class="text-gray-700 mb-4">If in the setup red led is blinking twice periodically then it is saying the microcontroller cannot communicate with the mpu9250. So, you may need to troubleshoot the connection or the sensor. In addition, there may be error during quadcopter is flying. The chart shows relation of blink and error</p>
+            
+            <div class="flex justify-center">
+                <a href="error.png" target="_blank">
+                    <img src="error.png" alt="Error Codes" class="content-img rounded-lg shadow-md">
+                </a>
+            </div>
+        </section>
+
+        <!-- Future Updates -->
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Future Updates</h2>
+            <p class="text-gray-700 mb-4">
+                This drone is not perfect as you can see in the video. The microcontroller gets reset every time while I start the motor. 
+                So, right now I am giving external power to the microcontroller from USB. But it is not a solution. The guy from the last video 
+                says it is due to EMI of the motor driver to the sensor. He suggests using a copper or aluminum shield for the microcontroller. 
+                Right now, I am working on it.
+            </p>
+            <p class="text-gray-700 mb-4">
+                Not only that, a motor is taking 4A in full throttle while running alone. But when all 4 motors are running, each motor is taking 
+                only 2.3A in full throttle. Therefore, the total thrust is much less than 4*45 = 180g. As my drone weighs 90g, it cannot fly higher. 
+                So, I am working on it also.
+            </p>
+            <p class="text-gray-700">
+                I hope to solve the problems in version 2. I also hope to make a YouTube video covering programming to hardware—everything 
+                you need to know about making this drone. Thanks for reaching this post. 😊
+            </p>
+        </section>
+
+        <!-- Learning Resources -->
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Learning Resources</h2>
+            <p class="text-gray-700 mb-6">There is a lot more to do for tuning the PID constants. You can watch these videos for understanding the code and drone building concepts.</p>
+            
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">PID Tuning and Code Understanding</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                            src="https://www.youtube.com/embed/JBvnB0279-Q" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2">I have modified his code for my drone.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Alternative Coding Approach</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                            src="https://www.youtube.com/embed/fQhsgUEnV2w" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2">There is another channel for learning coding; I think this is easier.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">FPV Drone Information</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe 
+                            class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                            src="https://www.youtube.com/embed/Sa6EslOHsI0?start=190" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2">Moreover, recently I have seen a video on FPV drone; I think this is also informative.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Projects Section -->
+    <section id="projects" class="text-gray-600 body-font bg-gray-100">
+        <div class="container mx-auto px-5 py-24">
+            <h2 class="text-3xl font-bold text-gray-900 title-font mb-8 text-center">My Projects</h2>
+            <div class="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
+                <ol class="list-decimal pl-5 space-y-4">
+                    <li class="text-lg">
+                        <a href="mini-drone_ver_1.html" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium">Mini Drone Version 1</a>
+                    </li>
+                    <li class="text-lg">
+                        <a href="mini_drone_ver_2.html" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium">Mini Drone Version 2</a>
+                    </li>
+                    <li class="text-lg">
+                        <a href="kalman-filter.html" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium">Kalman Filter Implementation</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-gray-600 body-font bg-white">
+        <div class="container mx-auto px-5 py-16">
+            <div class="flex flex-col items-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Me</h2>
+                
+                <p class="text-gray-700 text-lg mb-8">
+                    <a href="mailto:saumikkhan85@gmail.com" class="text-indigo-600 hover:text-indigo-800 hover:underline font-medium">
+                        saumikkhan85@gmail.com
+                    </a>
+                </p>
+
+                <div class="flex space-x-8">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/emonhasansaumik/" target="_blank" 
+                       class="text-gray-500 hover:text-indigo-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.604c0-1.337-.026-3.059-1.866-3.059-1.867 0-2.154 1.462-2.154 2.973v5.69h-3v-10h2.878v1.367h.041c.4-.757 1.379-1.555 2.836-1.555 3.033 0 3.594 1.997 3.594 4.593v5.595z"/>
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/saumik02" target="_blank" 
+                       class="text-gray-500 hover:text-indigo-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+                            <path d="M12 .5c-6.627 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.385.6.113.793-.26.793-.577 0-.285-.011-1.041-.016-2.044-3.338.725-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.753-1.333-1.753-1.091-.745.083-.729.083-.729 1.205.084 1.838 1.237 1.838 1.237 1.072 1.835 2.809 1.305 3.495.998.108-.776.419-1.305.762-1.605-2.665-.305-5.467-1.332-5.467-5.93 0-1.31.468-2.381 1.235-3.221-.124-.303-.535-1.527.117-3.184 0 0 1.007-.322 3.3 1.23.957-.266 1.983-.398 3.003-.403 1.02.005 2.047.137 3.006.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.657.242 2.881.118 3.184.77.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.623-5.478 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .32.192.694.799.576 4.765-1.589 8.196-6.085 8.196-11.385 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@SaumikKhan" target="_blank" 
+                       class="text-gray-500 hover:text-red-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186c-.252-1.695-1.658-3.03-3.316-3.285-2.86-.449-7.19-.451-7.19-.451s-4.33.002-7.19.451c-1.658.255-3.064 1.59-3.316 3.285-.459 3.086-.459 6.292-.459 6.292s0 3.206.459 6.292c.252 1.695 1.658 3.03 3.316 3.285 2.86.449 7.19.451 7.19.451s4.33-.002 7.19-.451c1.658-.255 3.064-1.59 3.316-3.285.459-3.086.459-6.292.459-6.292s0-3.206-.459-6.292zm-13.498 9.086v-6l5.995 3-5.995 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-gray-600 body-font bg-gray-800 text-gray-400 py-6">
+        <div class="container mx-auto px-5 text-center">
+            <p>© 2025 SAUMIK DAILY - All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
